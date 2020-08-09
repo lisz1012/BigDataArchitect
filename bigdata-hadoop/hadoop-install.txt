@@ -125,7 +125,7 @@ hadoop 2.6.5
 	做时间同步
 	yum install ntp  -y
 	vi /etc/ntp.conf
-		server ntp1.aliyun.com
+		server ntp1.aliyun.com (国内)
 	service ntpd start
 	chkconfig ntpd on
 	
