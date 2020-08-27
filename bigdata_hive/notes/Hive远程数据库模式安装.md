@@ -44,6 +44,7 @@
 				<value>123</value>
 			</property>
 ```
+注：`hive.metastore.warehouse.dir`设置了hive数据在HDFS中的存储路径，是这个属性是跟HDFS相关联的，metastore的服务端和客户端都装了hive，也都要配置其配置的值相同
 
 ##### 	4、添加MySQL的驱动包拷贝到lib目录
 
