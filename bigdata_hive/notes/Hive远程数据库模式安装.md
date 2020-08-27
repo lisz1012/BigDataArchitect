@@ -57,5 +57,8 @@
 ```
 		hive --service metastore
 ```
-
-##### 	7、执行相应的hive SQL的基本操作
+##### 	6、在hive的节点上启动hive
+```
+		hive
+```
+##### 	7、在hive命令行下执行相应的hive SQL的基本操作
