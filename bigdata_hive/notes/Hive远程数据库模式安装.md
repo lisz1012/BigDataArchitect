@@ -53,6 +53,9 @@
 		schematool -dbType mysql -initSchema
 ```
 
-##### 	6、执行hive启动对应的服务
+##### 	6、在metastore的服务节点(hadoop-03)执行hive启动对应的服务
+```
+		hive --service metastore
+```
 
 ##### 	7、执行相应的hive SQL的基本操作
