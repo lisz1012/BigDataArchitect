@@ -112,7 +112,7 @@
 
 原始数据：
 id,姓名,爱好,住址
-1,小明1,lol-book-movie,beijing:mashibing-shanghai:pudong,
+1,小明1,lol-book-movie,beijing:mashibing-shanghai:pudong
 
 --创建普通hive表（不包含行定义格式）
 	create table psn
