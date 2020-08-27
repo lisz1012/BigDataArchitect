@@ -57,7 +57,7 @@
 ```
 		hive --service metastore
 ```
-##### 	7、在hive的节点上启动hive
+##### 	7、在hive的节点上(hadoop-04)启动hive
 ```
 		hive
 ```
