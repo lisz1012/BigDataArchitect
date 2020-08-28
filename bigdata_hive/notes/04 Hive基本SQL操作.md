@@ -317,7 +317,19 @@ id,姓名,爱好,住址
 			INSERT OVERWRITE TABLE tablename PARTITION (partcol1[=val1], partcol2[=val2] 				...) select_statement FROM from_statement;
 			INSERT INTO TABLE tablename PARTITION (partcol1[=val1], partcol2[=val2] ...) 				select_statement FROM from_statement;
 */
---注意：这种方式插入数据的时候需要预先创建好结果表
+--注意：这种方式插入数据的时候需要预先创建好结果表:
+
+create table psn9
+(
+    id int,
+    name string
+)
+row format delimited
+fields terminated by ','
+collection items terminated by '-'
+map keys terminated by ':';
+
+
 --从表中查询数据插入结果表
 	INSERT OVERWRITE TABLE psn9 SELECT id,name FROM psn
 --从表中获取部分列插入到新表中
@@ -327,6 +339,7 @@ id,姓名,爱好,住址
 	insert into table psn10
 	select id
 ```
+注：以上通过select和倒装select所创建的表都要通过MapReduce所以会比较慢
 
 ##### 	3、Writing data into the filesystem from queries
 
