@@ -113,6 +113,14 @@
 原始数据：
 id,姓名,爱好,住址
 1,小明1,lol-book-movie,beijing:mashibing-shanghai:pudong
+2,小明2,lol-book-movie,beijing:mashibing-shanghai:pudong
+3,小明3,lol-book-movie,beijing:mashibing-shanghai:pudong
+4,小明4,lol-book-movie,beijing:mashibing-shanghai:pudong
+5,小明5,lol-movie,beijing:mashibing-shanghai:pudong
+6,小明6,lol-book-movie,beijing:mashibing-shanghai:pudong
+7,小明7,lol-book,beijing:mashibing-shanghai:pudong
+8,小明8,lol-book,beijing:mashibing-shanghai:pudong
+9,小明9,lol-book-movie,beijing:mashibing-shanghai:pudong
 
 --创建普通hive表（不包含行定义格式）
 	create table psn
