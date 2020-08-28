@@ -179,7 +179,7 @@ id,姓名,爱好,住址
 		       然后创建一个外部表，给B部门用，此时就不用担心B部门误删数据从而影响到A部门了. 方便之处在于：
 		       数据已经有了，直接create external ... location '...'就可以把数据同步到hive表中做查询了，
 		       而不用先create一张hive表，然后再load data [local] inpath '...' into table psn;了。
-		       hive是读时检查 
+		       hive是读时检查 	
 */	
 /*
 	hive的分区表:
