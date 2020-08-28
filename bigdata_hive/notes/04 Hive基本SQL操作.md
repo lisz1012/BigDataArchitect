@@ -418,3 +418,6 @@ id,姓名,爱好,住址
 	7,lucky
 ```
 
+##### 参考链接
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL
+https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DML
