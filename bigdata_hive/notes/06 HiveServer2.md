@@ -8,7 +8,7 @@
 HiveServer2 (HS2) is a server interface that enables remote clients to execute queries against Hive and retrieve the results (a more detailed intro here). The current implementation, based on Thrift RPC, is an improved version of HiveServer and supports multi-client concurrency and authentication. It is designed to provide better support for open API clients like JDBC and ODBC.
 ```
 
-​	 	HiveServer2是一个服务接口，能够允许远程的客户端去执行SQL请求且得到检索结果。HiveServer2的实现，依托于Thrift RPC，是HiveServer的提高版本，它被设计用来提供更好的支持对于open API例如JDBC和ODBC。
+​	 	HiveServer2是一个服务接口，能够允许远程的客户端去执行SQL请求且得到检索结果。HiveServer2的实现，依托于Thrift RPC，是HiveServer的提高版本，它被设计用来提供更好的支持对于open API例如JDBC和ODBC。启动：hiveserver2 或者 hive --service hiveserver2
 
 ```
 HiveServer is an optional service that allows a remote client to submit requests to Hive, using a variety of programming languages, and retrieve results. HiveServer is built on Apache ThriftTM (http://thrift.apache.org/), therefore it is sometimes called the Thrift server although this can lead to confusion because a newer service named HiveServer2 is also built on Thrift. Since the introduction of HiveServer2, HiveServer has also been called HiveServer1.
