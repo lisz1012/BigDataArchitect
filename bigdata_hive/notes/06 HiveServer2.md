@@ -36,6 +36,13 @@ HiveServer is an optional service that allows a remote client to submit requests
 		<name>hadoop.proxyuser.root.hosts</name>	
 		<value>*</value>
     	</property>
+	
+--copy这个文件到所有节点的相同目录下：
+	/opt/bigdata/hadoop-2.10.0/etc/hadoop
+	scp core-site.xml hadoop-02:`pwd`
+	scp core-site.xml hadoop-03:`pwd`
+	scp core-site.xml hadoop-04:`pwd`
+	
 --配置完成之后重新启动集群，或者在namenode的节点上执行如下命令
 	hdfs dfsadmin -fs hdfs://hadoop-01:8020 -refreshSuperUserGroupsConfiguration
 	hdfs dfsadmin -fs hdfs://hadoop-02:8020 -refreshSuperUserGroupsConfiguration
