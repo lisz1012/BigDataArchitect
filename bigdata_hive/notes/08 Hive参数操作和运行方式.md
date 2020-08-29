@@ -32,7 +32,7 @@
 ​			例如：set hive.cli.print.header=true;
 
 ```sql
---在hive cli控制台可以通过set对hive中的参数进行查询设置
+--在hive cli控制台可以通过set对hive中的参数进行查询设置(是的查询结果带上了表头)
 --set设置
 	set hive.cli.print.header=true;
 --set查看
