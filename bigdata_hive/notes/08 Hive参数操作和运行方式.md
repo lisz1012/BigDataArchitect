@@ -23,7 +23,7 @@
 
 ​		2、在启动hive cli时，通过--hiveconf key=value的方式进行设置
 
-​			例如：hive --hiveconf hive.cli.print.header=true
+​			例如：hive --hiveconf hive.cli.print.header=true  (查询结果带上了表头)
 
 ​			**注意：只在当前会话有效，退出会话之后参数失效**
 
@@ -32,7 +32,7 @@
 ​			例如：set hive.cli.print.header=true;
 
 ```sql
---在hive cli控制台可以通过set对hive中的参数进行查询设置(是的查询结果带上了表头)
+--在hive cli控制台可以通过set对hive中的参数进行查询设置
 --set设置
 	set hive.cli.print.header=true;
 --set查看
