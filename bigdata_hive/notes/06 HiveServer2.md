@@ -49,7 +49,7 @@ HiveServer is an optional service that allows a remote client to submit requests
         注：这里要在两台namenode中都分别执行，因为开启了HA
 ```
 
-1、独立hiveserver2模式
+1、独立hiveserver2模式（以上的方式也就类似启动了一个metastore的服务）
 
 ​	1、将现有的所有hive的服务停止，不需要修改任何服务，在node03机器上执行hiveserver2或者hive --service hiveserver2的命令，开始启动hiveserver2的服务，hiveserver2的服务也是一个阻塞式窗口，当开启服务后，会开启一个10000的端口，对外提供服务。
 
