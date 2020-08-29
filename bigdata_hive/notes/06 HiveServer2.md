@@ -31,15 +31,14 @@ HiveServer is an optional service that allows a remote client to submit requests
 	<property>
 		<name>hadoop.proxyuser.root.groups</name>	
 		<value>*</value>
-    </property>
-    <property>
+    	</property>
+    	<property>
 		<name>hadoop.proxyuser.root.hosts</name>	
 		<value>*</value>
-    </property>
+    	</property>
 --配置完成之后重新启动集群，或者在namenode的节点上执行如下命令
-	hdfs dfsadmin -fs hdfs://node01:8020 -refreshSuperUserGroupsConfiguration
-	hdfs dfsadmin -fs hdfs://node02:8020 -refreshSuperUserGroupsConfiguration
-
+	hdfs dfsadmin -fs hdfs://hadoop-01:8020 -refreshSuperUserGroupsConfiguration
+	hdfs dfsadmin -fs hdfs://hadoop-02:8020 -refreshSuperUserGroupsConfiguration
 ```
 
 1、独立hiveserver2模式
