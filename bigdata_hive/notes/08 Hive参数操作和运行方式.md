@@ -43,7 +43,7 @@
 
 ​		4、hive参数初始化设置
 
-​			在当前用户的家目录下创建**.hiverc**文件，在当前文件中设置hive参数的命令，每次进入hive cli的时候，都会加载.hiverc的文件，执行文件中的命令。
+​			在当前用户的家目录下创建**.hiverc**文件，在当前文件中设置hive参数的命令，如：set hive.cli.print.header=true 每次进入hive cli的时候，都会加载.hiverc的文件，执行文件中的命令。
 
 ​			**注意：在当前用户的家目录下还会存在.hivehistory文件，此文件中保存了hive cli中执行的所有命令**
 
