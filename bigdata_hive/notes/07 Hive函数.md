@@ -256,4 +256,4 @@ b）需要实现evaluate函数，evaluate函数支持重载。
 
 ​	e）销毁临时函数：hive> DROP  FUNCTION add_example;
 
- 
+ 参考链接：https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
