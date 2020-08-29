@@ -63,7 +63,7 @@ HiveServer is an optional service that allows a remote client to submit requests
 
 ​	3、在任意一台包含beeline脚本的虚拟机中执行beeline的命令进行连接
 
-这么做的用意就是metastore和hiverserver2分开，程序员通过hive>直接访问；其他business相关人员登录hiveserver2访问
+这么做的用意就是metastore和hiverserver2分开，程序员通过hive>直接访问；其他business相关人员登录hiveserver2只做查询访问
 
 ### HiveServer2的访问方式
 
