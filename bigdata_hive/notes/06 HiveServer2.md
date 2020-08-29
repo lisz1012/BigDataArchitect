@@ -79,7 +79,8 @@ HiveServer is an optional service that allows a remote client to submit requests
 ​			2、使用第一种beeline的方式访问的时候，用户名和密码可以不输入
 
 ​			3、使用第二种beeline方式访问的时候，必须输入用户名和密码，用户名和密码是什么无所谓
-beeline 登录之后只能做查询，不能修改表数据
+
+beeline 登录之后只能做查询，不能修改表数据，如：load data local inpath '/root/data/data' into table psn2; 这个不行，除非服务端有对应的目录和文件'/root/data/data'
 
 ##### 	2、jdbc的访问方式
 
