@@ -24,7 +24,7 @@ HiveServer is an optional service that allows a remote client to submit requests
 
 ### hiveserver2的搭建使用
 
-​	在搭建hiveserver2服务的时候需要修改hdfs的超级用户的管理权限，修改配置如下：
+​	在搭建hiveserver2服务的时候需要修改hdfs的超级用户的管理权限，是因为 hive2 用的是新API，修改配置如下：
 
 ```sql
 --在hdfs集群的core-site.xml文件中添加如下配置文件
