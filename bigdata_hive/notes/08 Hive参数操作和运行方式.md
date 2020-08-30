@@ -83,9 +83,9 @@
 	hive -S -e "select * from psn5">aaa
 --hive可以直接读取文件中的sql命令，进行执行
 	hive -f file
---hive可以从文件中读取命令，并且执行初始化操作
+--hive可以从文件中读取命令，并且执行初始化操作, 不会从hive>提示符退出
 	hive -i /home/my/hive-init.sql
---在hive的命令行中也可以执行外部文件中的命令
+--在hive的命令行中也可以执行命令行外部的文件中的命令
 	hive> source file (在hive cli中运行)
 ```
 
