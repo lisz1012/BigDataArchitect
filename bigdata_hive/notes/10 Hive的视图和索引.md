@@ -4,7 +4,7 @@
 
 ##### 	1、基本介绍
 
-​		Lateral View用于和UDTF函数（explode、split）结合来使用。
+​		Lateral View用于和UDTF函数（explode、split这种入一个值回多个值的）结合来使用。
 ​		首先通过UDTF函数拆分成多行，再将多行结果组合成一个支持别名的虚拟表。主要解决在select使用UDTF做查询过程中，查询只能包含单个UDTF，不能包含其他字段、以及多个UDTF的问题。
 ​		语法：
 ​			LATERAL VIEW udtf(expression) tableAlias AS columnAlias (',' columnAlias)
