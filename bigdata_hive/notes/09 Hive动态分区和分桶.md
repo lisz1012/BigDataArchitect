@@ -19,7 +19,7 @@
 	set hive.exec.max.dynamic.partitions.pernode;
 --所有执行mr节点上，允许创建的所有动态分区的最大数量(1000)	
 	set hive.exec.max.dynamic.partitions;
---所有的mr job允许创建的文件的最大数量(100000, 这个数字是跟Linux最多打开的文件数目挂钩的)	
+--所有的mr job允许创建的文件的最大数量(100000, 这个数字是跟Linux最多打开的文件数目挂钩的, 差不多每1G内存打开100000个文件)	
 	set hive.exec.max.created.files;
 ```
 
