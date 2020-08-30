@@ -52,6 +52,8 @@
 ##### 	1、hive运行方式分类
 
 ​		（1）命令行方式或者控制台模式
+			dfs -cat /user/hive_remote/warehouse/psn5/gender=male/* 查看HDFS李文件的内容，
+			dfs -cat /data/fof/input/*; 甚至可以查看非hive所管辖的目录里的文件
 
 ​		（2）脚本运行方式（实际生产环境中用最多）
 
