@@ -65,6 +65,6 @@
 		y：必须为该表总bucket数的倍数或因子
 		
 		select * from psnbucket tablesample(bucket 2 out of 4); 
-		从第二个桶取数据，取通的个数/y个数据
+		从第二个桶取数据，取桶的个数/y个数据。y取桶的因子，不要取桶的倍数，否则会触发hive的一个bug
 ```
 
