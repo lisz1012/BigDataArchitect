@@ -76,11 +76,11 @@
 ```sql
 --hive -d abc=1 进入hive命令行，然后select * from psn2 where id=${abc};使用变量
 --hive直接执行sql命令，可以写一个sql语句，也可以使用;分割写多个sql语句
-	hive -e ""
+	hive -e "select * from psn5"
 --hive执行sql命令，将sql语句执行的结果重定向到某一个文件中
-	hive -e "">aaa
+	hive -e "select * from psn5">aaa
 --hive静默输出模式，输出的结果中不包含ok，time token等关键字
-	hive -S -e "">aaa
+	hive -S -e "select * from psn5">aaa
 --hive可以直接读取文件中的sql命令，进行执行
 	hive -f file
 --hive可以从文件中读取命令，并且执行初始化操作
