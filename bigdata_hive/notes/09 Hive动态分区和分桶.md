@@ -30,6 +30,7 @@
 	INSERT OVERWRITE TABLE tablename PARTITION (partcol1[=val1], partcol2[=val2] ...) 		select_statement FROM from_statement;
 	INSERT INTO TABLE tablename PARTITION (partcol1[=val1], partcol2[=val2] ...) 			select_statement FROM from_statement;
 ```
+不能写select * from source_table 要每一列都写出来，而且要跟target_table的每一列一一对应，顺序不能错
 
 ### 2、Hive分桶
 
