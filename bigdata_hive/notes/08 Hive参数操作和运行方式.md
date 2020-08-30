@@ -53,7 +53,7 @@
 
 ​		（1）命令行方式或者控制台模式
 			dfs -cat /user/hive_remote/warehouse/psn5/gender=male/* 查看HDFS李文件的内容，
-			dfs -cat /data/fof/input/*; 甚至可以查看非hive所管辖的目录里的文件
+			dfs -cat /data/fof/input/*; 甚至可以查看非hive所管辖的目录里的文件。这种运行方式很快，因为连接已经建立好了，不用像hdfs -dfs ... 那样先建立连接了
 
 ​		（2）脚本运行方式（实际生产环境中用最多）
 
