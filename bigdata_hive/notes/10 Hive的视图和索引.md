@@ -21,7 +21,7 @@ select count(distinct(likes_count)), count(distinct(address_city)) from psn
 lateral view explode(likes) psn as likes_count
 lateral view explode(address) psn as address_city, address_district;
 ```
-查询表里面有多少种爱好、有多少个城市. 从SQL转化为MR任务有个抽象语法树->查询块->逻辑查询计划->物理查询计划->优化执行(一般不问。hive源码也不用看)
+查询表里面有多少种爱好、有多少个城市. 从SQL转化为MR任务有个抽象语法树->查询块->逻辑查询计划->物理查询计划->优化执行(一般不问。hive源码也不用看, 看源码的时候要从脚本开始，因为很多框架启动的时候都是通过脚本的)
 
 ### 2、Hive视图
 
