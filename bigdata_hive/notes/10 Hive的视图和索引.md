@@ -16,6 +16,12 @@ select count(distinct(myCol1)), count(distinct(myCol2)) from psn2
 LATERAL VIEW explode(likes) myTable1 AS myCol1 
 LATERAL VIEW explode(address) myTable2 AS myCol2, myCol3;
 ```
+```sql
+select count(distinct(likes_count)), count(distinct(address_city)) from psn
+lateral view explode(likes) psn as likes_count
+lateral view explode(address) psn as address_city, address_district;
+```
+查询表里面有多少种爱好、有多少个城市
 
 ### 2、Hive视图
 
