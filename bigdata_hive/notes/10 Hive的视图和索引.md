@@ -56,7 +56,7 @@ lateral view explode(address) psn as address_city, address_district;
 
 ##### 	1、hive索引
 
-​		为了提高数据的检索效率，可以使用hive的索引. 索引存的是某一条记录在硬盘上的位置，包括在哪个目录的哪个文件，及其偏移量
+​		为了提高数据的检索效率，可以使用hive的索引. 索引存的是某一列在硬盘上的位置，包括在哪个目录的哪个文件，及其偏移量
 
 ##### 	2、hive基本操作
 
