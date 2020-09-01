@@ -69,6 +69,8 @@ SET ROLE (role_name|ALL|NONE);
 SHOW CURRENT ROLES;  
 -- 查看所有存在的角色
 SHOW ROLES;  
+-- admin给其他角色赋予权限
+grant admin to role test with admin option; -- with admin option的意思是test也有权给别人赋予权限了
 ```
 
 ##### 6、Hive权限分配图
