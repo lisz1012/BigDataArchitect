@@ -1,5 +1,7 @@
 # Hive权限管理
 
+权限设计的终极目的：防止好人做错事，而不是防止坏人做坏事
+
 ##### 1、hive授权模型介绍
 
 ![]([https://github.com/msbbigdata/hive/blob/master/images/hive%E6%8E%88%E6%9D%83%E6%A8%A1%E5%9E%8B.png])
