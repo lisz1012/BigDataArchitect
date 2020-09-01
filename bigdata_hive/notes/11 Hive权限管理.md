@@ -70,7 +70,7 @@ SHOW CURRENT ROLES;
 -- 查看所有存在的角色
 SHOW ROLES;  
 -- admin给其他角色赋予权限
-grant admin to role test with admin option; -- with admin option的意思是test也有权给别人赋予权限了
+grant admin to role test with admin option; -- with admin option的意思是test也有权给别人赋予权限了，其中admin对应的是角色赋予权限，而grant是对于表赋予权限
 ```
 
 ##### 6、Hive权限分配图
