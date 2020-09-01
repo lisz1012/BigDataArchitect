@@ -56,6 +56,8 @@
 ##### 5、Hive权限管理命令
 
 ```sql
+--root先切换到管理员角色
+SET ROLE role_name
 --角色的添加、删除、查看、设置：
 -- 创建角色
 CREATE ROLE role_name;  
