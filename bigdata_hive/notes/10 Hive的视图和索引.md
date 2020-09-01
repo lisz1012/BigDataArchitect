@@ -76,3 +76,14 @@ lateral view explode(address) psn as address_city, address_district;
 	DROP INDEX IF EXISTS t1_index ON psn2;
 ```
 
+### 4、Join
+join一般是指inner join，两张表里必须有完全匹配的记录，left join是指：把左表记录显示全了，而不管右表，右表如果有则正常显示，如果没有，显示NULL；right join反之。FULL：都显示，匹配不上则显示
+NULL
+
+left semi join代替的是 in 或者 exists ，select中不能包括右表的字段
+
+多次连续join的时候，尽量多写相同的连接字段在各个on () 里面
+
+做join的时候 on(a.id = b.id)，两个map任务，相同的id为key，reduce的时候放在同一台reducer.
+
+Hive一般不做分页，limit的意思是限制输出，并不是分页
