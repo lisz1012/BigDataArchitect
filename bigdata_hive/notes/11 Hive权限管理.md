@@ -57,7 +57,7 @@
 
 ```sql
 --root先切换到管理员角色
-SET ROLE role_name
+SET ROLE admin;
 --角色的添加、删除、查看、设置：
 -- 创建角色
 CREATE ROLE role_name;  
