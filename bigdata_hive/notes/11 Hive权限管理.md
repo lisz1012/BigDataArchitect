@@ -73,6 +73,12 @@ SHOW ROLES;
 grant admin to role test with admin option; -- with admin option的意思是test也有权给别人赋予权限了，其中admin对应的是角色赋予权限，而grant是对于表赋予权限
 -- 查看某个角色（比如：test）的权限
 show role grant role test;
+-- 收回角色的权限
+revoke admin from role test;
+-- 表级别的赋予权限
+grant select on psn to user abcd with grant option;
+-- 表级别的收回权限
+revoke update on psn from user abcd;
 ```
 
 ##### 6、Hive权限分配图
