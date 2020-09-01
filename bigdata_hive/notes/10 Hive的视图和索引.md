@@ -84,6 +84,7 @@ left semi join代替的是 in 或者 exists ，select中不能包括右表的字
 
 多次连续join的时候，尽量多写相同的连接字段在各个on () 里面
 
-做join的时候 on(a.id = b.id)，两个map任务，相同的id为key，在value里面标识一下来自于那个文件。reduce的时候，相同的key放在同一台reducer.
+做join的时候 on(a.id = b.id)，两个map任务，相同的id为key，在value里面标识一下来自于那个文件。reduce的时候，相同的key放在同一台reducer. 在reducer判断一下是不是都来自a文件
+如果是，则没必要做join了，如果不是，则join
 
 Hive一般不做分页，limit的意思是限制输出，并不是分页。Hive可以做分页，但是一般没有这么一个需求。正确的做法是把查询结果转存到关系型数据库，再从关系型数据库中取值的时候就能用limit了
