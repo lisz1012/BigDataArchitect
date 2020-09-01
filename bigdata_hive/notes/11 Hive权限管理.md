@@ -69,7 +69,7 @@ SET ROLE (role_name|ALL|NONE);
 SHOW CURRENT ROLES;  
 -- 查看所有存在的角色
 SHOW ROLES;  
--- admin给其他角色赋予权限
+-- admin给其他角色赋予权限：把admin角色所有的权限赋给test角色
 grant admin to role test with admin option; -- with admin option的意思是test也有权给别人赋予权限了，其中admin对应的是角色赋予权限，而grant是对于表赋予权限
 -- 查看某个角色（比如：test）的权限
 show role grant role test;
