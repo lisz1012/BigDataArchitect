@@ -131,7 +131,7 @@ hive.groupby.mapaggr.checkinterval：
 hive.map.aggr.hash.min.reduction： 
 --map端聚合使用的内存的最大值
 hive.map.aggr.hash.percentmemory： 
---是否对GroupBy产生的数据倾斜做优化，默认为false，解决数据倾斜造成的某个Reducer特别慢，甚至是卡死的情况
+--是否对GroupBy产生的数据倾斜做优化，默认为false，解决数据倾斜造成的某个Reducer特别慢，甚至是卡死的情况。把一个大MR分解成两个MR，第一个按照哈希随机map，reduce完了之后再交给第二个MR
 hive.groupby.skewindata
 ```
 
