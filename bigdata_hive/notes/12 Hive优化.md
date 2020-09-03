@@ -70,7 +70,7 @@ set hive.mapred.mode=strict;
 
 ​				（1）对于分区表，必须添加where对于分区字段的条件过滤
 
-​				（2）order by语句必须包含limit输出限制
+​				（2）order by语句必须包含limit输出限制. order by要求把所有的数据加载到同一个Reducer中，如果资源不太够就会执行失败
 
 ​				（3）限制执行笛卡尔积的查询
 
