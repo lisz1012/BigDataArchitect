@@ -50,7 +50,7 @@ set hive.exec.mode.local.auto.inputbytes.max=128M
 set hive.exec.parallel=true;
 ```
 
-​		注意：Hive的并行度并不是无限增加的，在一次SQL计算中，可以通过以下参数来设置并行的job的个数
+​		注意：Hive的并行度并不是无限增加的，在一次SQL计算中，可以通过以下参数来设置并行的job的个数. 置为true的时候，hive会自行判断能不能并行计算，然后就可以在适当的情况下并行计算了
 
 ```sql
 --设置一次SQL计算允许并行执行的job个数的最大值
