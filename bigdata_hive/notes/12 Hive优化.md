@@ -108,7 +108,7 @@ set hive.auto.convert.join = true;
 hive.mapjoin.smalltable.filesize;  
 --（大表小表判断的阈值，如果表的大小小于该值则会被加载到内存中运行）
 hive.ignore.mapjoin.hint；
---（默认值：true（采用自动配置，而忽略手动配置）；是否忽略mapjoin hint 即mapjoin标记）
+--（默认值：true（采用自动配置，而忽略手动配置）；是否忽略mapjoin hint 即mapjoin标记/*+*/
 ```
 
 ​		4、大表join大表
