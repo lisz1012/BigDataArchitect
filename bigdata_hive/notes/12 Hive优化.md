@@ -106,7 +106,8 @@ set hive.auto.convert.join = true;
 --（该参数为true时，Hive自动对左边的表统计量，如果是小表就加入内存，即对小表使用Map join）
 --相关配置参数：
 hive.mapjoin.smalltable.filesize;  
---（大表小表判断的阈值，如果表的大小小于该值则会被加载到内存中运行, 默认小表的定义是不大于大约25M，这个只可以改set hive.mapjoin.smalltable.filesize=50000000，但太大就会影响内存占用，可能程序无法运行）
+--（大表小表判断的阈值，如果表的大小小于该值则会被加载到内存中运行, 默认小表的定义是不大于大约25M，这个只可以改set hive.mapjoin.smalltable.filesize=50000000，
+但太大就会影响内存占用，可能程序无法运行，这个50000000是多个文件大小的总和）
 hive.ignore.mapjoin.hint；
 --（默认值：true（采用自动配置，而忽略手动配置）；是否忽略mapjoin hint 即mapjoin标记/*+*/
 ```
