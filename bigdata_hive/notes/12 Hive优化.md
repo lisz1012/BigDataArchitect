@@ -22,6 +22,7 @@ explain [extended] query
 ```sql
 --查看Hive的数据抓取策略
 Set hive.fetch.task.conversion=none/more;
+一般设为more，否则太慢了
 ```
 
 ### 3、Hive本地模式
