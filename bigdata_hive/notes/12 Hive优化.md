@@ -103,7 +103,7 @@ FROM  smallTable  JOIN  bigTable  ON  smallTable.key  =  bigTable.key;
 ```sql
 --通过修改以下配置启用自动的mapjoin：
 set hive.auto.convert.join = true;
---（该参数为true时，Hive自动对左边的表统计量，如果是小表就加入内存，即对小表使用Map join）
+--（该参数为true时，Hive自动对左边的表统计量，如果是小表就加入内存，即对小表使用Map join。小表放在左边效率更高）
 --相关配置参数：
 hive.mapjoin.smalltable.filesize;  
 --（大表小表判断的阈值，如果表的大小小于该值则会被加载到内存中运行, 默认小表的定义是不大于大约25M，这个只可以改set hive.mapjoin.smalltable.filesize=50000000，
@@ -113,7 +113,7 @@ hive.ignore.mapjoin.hint；
 ```
 
 ​		4、大表join大表
-小表放在左边效率更高
+
 ​		（1）空key过滤：有时join超时是因为某些key对应的数据太多，而相同key对应的数据都会发送到相同的reducer上，从而导致内存不够。此时我们应该仔细分析这些异常的key，很多情况下，这些key对应的数据是异常数据，我们需要在SQL语句中进行过滤。
 ​		（2）空key转换：有时虽然某个key为空对应的数据很多，但是相应的数据不是异常数据，必须要包含在join的结果中，此时我们可以表a中key为空的字段赋一个随机的值，使得数据随机均匀地分不到不同的reducer上
 
