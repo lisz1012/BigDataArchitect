@@ -147,7 +147,7 @@ hive.groupby.skewindata
 set hive.merge.mapfiles=true
 --是否合并reduce输出文件：
 set hive.merge.mapredfiles=true;
---合并文件的大小：
+--合并文件的大小：文件也不是越大越好的，超过256M就不合并了
 set hive.merge.size.per.task=256*1000*1000
 ```
 
