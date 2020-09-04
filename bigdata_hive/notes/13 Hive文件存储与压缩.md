@@ -140,7 +140,7 @@ ORC和PARQUET是基于列式存储的。
 --（3）查看表中数据大小
 	dfs -du -h /user/hive/warehouse/log_text;
 	18.1 M  /user/hive/warehouse/log_text/log.data
---2）ORC (列式存储)
+--2）ORC (列式存储) 可以跟spark无缝对接
 --（1）创建表，存储数据格式为ORC
 	create table log_orc(track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t' stored as orc ;
 --（2）向表中加载数据
