@@ -178,7 +178,7 @@ set hive.exec.reducers.max
 	1、小文件个数过多
 	2、task个数过多
 缺点：
-	设置开启之后，task插槽会一直占用资源，不论是否有task运行，直到所有的task即整个job全部执行完成时，才会释放所有的task插槽资源！
+	设置开启之后，task插槽会一直占用资源，不论是否有task运行，直到所有的task即整个job全部执行完成时，才会释放所有的task插槽资源！即使没有用完所有申请的tasks，其他的任务也不能来用空闲的tasks
 */
 set mapred.job.reuse.jvm.num.tasks=n;--（n为task插槽个数）
 
