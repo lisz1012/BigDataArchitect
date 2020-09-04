@@ -132,7 +132,7 @@ ORC和PARQUET是基于列式存储的。
 ​		存储文件的压缩比测试：
 
 ```sql
---1）TextFile
+--1）TextFile (行式存储)
 --（1）创建表，存储数据格式为TEXTFILE
 	create table log_text (track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t' stored as textfile ;
 --（2）向表中加载数据
@@ -140,7 +140,7 @@ ORC和PARQUET是基于列式存储的。
 --（3）查看表中数据大小
 	dfs -du -h /user/hive/warehouse/log_text;
 	18.1 M  /user/hive/warehouse/log_text/log.data
---2）ORC
+--2）ORC (列式存储)
 --（1）创建表，存储数据格式为ORC
 	create table log_orc(track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t' stored as orc ;
 --（2）向表中加载数据
@@ -148,7 +148,7 @@ ORC和PARQUET是基于列式存储的。
 --（3）查看表中数据大小
 	dfs -du -h /user/hive/warehouse/log_orc/ ;
 	2.8 M  /user/hive/warehouse/log_orc/000000_0
---3）Parquet
+--3）Parquet (列式存储)
 --（1）创建表，存储数据格式为parquet
 	create table log_parquet(track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t' stored as parquet ;	
 --（2）向表中加载数据
