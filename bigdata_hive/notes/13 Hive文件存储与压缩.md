@@ -134,7 +134,7 @@ ORC和PARQUET是基于列式存储的。
 ```sql
 --1）TextFile
 --（1）创建表，存储数据格式为TEXTFILE
-	create table log_text (track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t'stored as textfile ;
+	create table log_text (track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t' stored as textfile ;
 --（2）向表中加载数据
 	hive (default)> load data local inpath '/root/log' into table log_text ;
 --（3）查看表中数据大小
@@ -142,7 +142,7 @@ ORC和PARQUET是基于列式存储的。
 	18.1 M  /user/hive/warehouse/log_text/log.data
 --2）ORC
 --（1）创建表，存储数据格式为ORC
-	create table log_orc(track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t'stored as orc ;
+	create table log_orc(track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t' stored as orc ;
 --（2）向表中加载数据
 	insert into table log_orc select * from log_text ;
 --（3）查看表中数据大小
@@ -150,7 +150,7 @@ ORC和PARQUET是基于列式存储的。
 	2.8 M  /user/hive/warehouse/log_orc/000000_0
 --3）Parquet
 --（1）创建表，存储数据格式为parquet
-	create table log_parquet(track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t'stored as parquet ;	
+	create table log_parquet(track_time string,url string,session_id string,referer string,ip string,end_user_id string,city_id string)row format delimited fields terminated by '\t' stored as parquet ;	
 --（2）向表中加载数据
 	insert into table log_parquet select * from log_text ;
 --（3）查看表中数据大小
